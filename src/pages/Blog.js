@@ -11,7 +11,7 @@ const Blog = () => {
           <div className="mainImage_Contant">
             <p>Travel Blog</p>
             <h2>Dubai: A Journey Through Luxury, Culture, and Adventure</h2>
-            <p>Best Place List page here</p>
+            <p>Best Place List</p>
 
           </div>
         </div>
