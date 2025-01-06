@@ -1,0 +1,105 @@
+@import './fonts.scss'; 
+@import './variable.scss'; 
+@import './reset.scss'; 
+
+@mixin mob($breakpoint: 768px) {
+@media (max-width: #{$breakpoint}
+) {@content;}
+}
+
+* {margin:0; padding:0;}
+.add-block {padding:0;}
+
+@media (max-width: 768px) {
+.add-block {display:none;}
+}
+
+
+.title-row{
+    h2 {font-size:25px; font-weight:bolder; color:$light-black-2; font-family:$f-HelveticaNeue; line-height:32px; @include mob {font-size:24px;}}
+    p {font-size:22px; font-weight:400; font-family:$f-HelveticaNeue; color:$light-black; padding-bottom:15px; line-height:28px; @include mob {font-size:18px; line-height:26px;}}
+}
+.container{
+    .container{padding-left: 0;padding-right: 0;}
+}
+.difference {padding-bottom: 20px;}
+
+.comparison-container { background: $white; padding: 25px; display:flex; flex-wrap:wrap; border:2px solid #A8BED6; border-radius:20px; position: relative;
+    &:before{background-image: url(../images/next.png); background-size: contain; height: 16px; width: 128px; position: absolute; left: 50%; bottom: 35px; margin-left: -64px; content: '';
+        @include mob {bottom: calc(50% - 5px);}
+    }
+    @include mob {margin-bottom:0px;}
+    .image-div { padding: 0 12px;
+        &:last-child{padding-right: 0;}
+        &:first-child{padding-left: 0;}
+        @include mob {padding: 0 0 20px;
+            &:last-child{padding:25px 0 0 ;}
+            &:first-child{padding: 0 0 25px;}
+        }
+        h4 {color:$brand-2; margin:16px 0 8px; font-size:22px; text-align:left; padding-left:16px; font-family: $f-robo; font-weight: 600; 
+            @include mob {padding-left:0; margin:4px 0; font-size:18px;}}
+        p {font-size:18px; line-height:1; text-align:left; padding-left:16px; padding-bottom: 0;font-family: $f-robo; margin-bottom: 0;
+            @include mob {padding:0; margin:0;font-size: 16px;}
+        }
+    }
+}
+
+.text-right {
+text-align:end !important; padding-right:16px; @include mob {text-align:left !important; padding-right:0;}
+}
+
+.col-md-6 {flex:0 0 50%; max-width:50%; box-sizing:border-box;}
+.text-center {text-align:center;}
+.img-fluid {max-width:100%; height:auto;}
+.rounded {border-radius:8px;}
+.text-primary {color:$brand-1;}
+.mt-3 {margin-top:15px;}
+
+@media (max-width: 768px) {
+.col-md-6 {flex:0 0 100%; max-width:100%; margin-bottom:4px;}
+.text-left {text-align:center;}
+}
+
+.drop-zone {max-width:1080px; width:100%; display:grid; align-content:center; justify-content:center; gap:8px; margin:20px auto; padding:50px 0; border:2px dashed #ccc; box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius:15px; background-color:#fff; transition:background-color 0.3s ease; @include mob {gap:6px; margin:0 auto 22px auto; padding:30px 0;}
+}
+.file-list{ background:$white; box-shadow: 0px 0px 10px #0000000F; border: 2px solid #A8BED6; border-radius: 30px; padding: 30px;
+     h4 {margin:0; font-size:18px; color:#333;}
+     ul {list-style-type:none; padding:0; margin:0;display: block;
+        li {margin-bottom:5px; font-size:14px; color:#666; padding:0 0 15px;
+            .file-item{display: flex; border-radius: 15px; padding: 15px;z-index: 1; position: relative; background: #EFF1F5; align-items: center; min-height: 68px;
+                .progress-bar{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; content: '';z-index: -1; border-radius: 15px 0 0 15px; transition: all .3s ease;
+                    &.complete{border-radius: 15px;}
+                }
+                .caption-area{flex: 1;display: flex;align-items: flex-end; justify-content: flex-start;
+                    h6{text-align: left; font-family: $f-HelveticaNeue; letter-spacing: 0.3px; color: #121D31;font-size: 18px; max-width: 320px; text-overflow: ellipsis; overflow: hidden; margin: 0 ;padding-right: 10px;}
+                    p{ display: inline-block;margin: 0 auto; text-align: left; font-size: 12px; font-family: $f-HelveticaNeue; letter-spacing: 0.27px; color: #517398; }
+                }
+            }
+            .action-buttons{display: flex;}
+            .btn-img{max-width: 35px;display: block; margin-left: 10px;
+            }
+        }
+    }
+    .btn-row{margin: 0 auto;text-align: center;}
+}
+
+.file-upload-container p {font-size:22px; font-weight:400; color:black; margin:0; font-family:$f-robo;}
+.file-upload-container-image {justify-self:center; max-width:150px;}
+.drop-zone.dragging {background-color:#f0f8ff;}
+.file-input {display:none;}
+.browse-button {display:inline-block; margin-top:10px; padding:14px 30px; background-color:$brand-1; color:#fff; border:none; border-radius:5px; cursor:pointer; text-decoration:none; text-align:center; font-weight:700; justify-self:center; font-size:19px;}
+.browse-button:hover {background-color:#0056b3;}
+.gap-sm {gap:5%;}
+
+.banner {
+text-align:center; max-width:720px; margin:0 auto; padding:20px 0 20px; @include mob {padding:32px 0 22px;}
+h1 {font-size:47px; padding-bottom:20px; font-weight:900; @include mob {font-size:26px; padding-bottom:12px;}
+&:first-letter {color:$brand;}span {position:relative; display:inline-block; &:before {content:""; position:absolute; width:100%; background-repeat:no-repeat; bottom:-17px; height:25px; background-image:url('./../images/under-line.svg'); background-size:100% auto; animation:rotate 3s ease-in-out infinite; transform-origin:center;}}}
+p {font-size:26px; font-weight:500; font-family:$f-robo; @include mob {margin:0; font-size:18px;}}
+}
+
+@keyframes rotate {
+    0% {transform:translateX(0);}
+    50% {transform:translateX(10px);}
+    100% {transform:translateX(0);}
+}

@@ -1,0 +1,30 @@
+@import '/src/scss/variable.scss'; 
+
+@mixin mob($breakpoint: 768px) {
+@media (max-width: #{$breakpoint}
+) {@content;}
+}
+
+.faq-section {margin-top:5rem; @include mob {margin-top:0; margin-bottom:22px;}
+.faq-wrap{flex-wrap: wrap;
+    .faq-box{max-width: 50%;padding: 20px 30px;
+        &:nth-of-type(odd){padding-left: 0;}
+        &:nth-of-type(even){padding-right: 0;}
+        @include mob {padding: 0; margin-bottom:8px; max-width: 100%; margin: 0 0 20px;}
+    }
+}
+.title-row {
+    h2 {font-size:32px; font-weight:bold; color:#121D31; font-family:$f-tahomabold; padding:20px 30px; background-color:#EFF1F5; border:2px solid #A8BED6; border-radius:30px; margin-bottom:40px;
+         @include mob {font-size:24px; padding:16px; border-radius:22px; margin-bottom:16px;}
+    span {color:#1d64d6;}}
+}
+.faq-box {padding:1.5rem; margin-bottom:1.5rem; @include mob {padding: 0; margin-bottom:8px; max-width: 100%; margin: 0 0 20px;}
+.faq-title h4 {font-size:30px; font-weight:bold; color:#1d64d6; font-weight: 700; font-family: $f-tahomabold;
+    @include mob {font-size:20px; margin:0 0 4px; line-height:24px;}}
+.faq-text p {font-size:22px; color:#42536a; font-family: $f-HelveticaNeue; margin-bottom: 10px;
+     @include mob {font-size:16px; margin:0;}}
+}
+.image-box { flex:0 0 45%; box-sizing:border-box; 
+@include mob {flex:0 0 100%; max-width:100%;}
+}
+}
