@@ -20,12 +20,7 @@ const InfoSection = () => {
                         format that stands for Joint Photographic Experts Group, the
                         organization that created the standard. It is widely used.
                         JPEG can achieve compression ratios of 10:1 to 20:1 without
-                        noticeable loss in quality for typical use cases.JPEG uses 
-                        lossy compression, meaning that some image data is permanently
-                        discarded to reduce file size. JPEGs’ portability is one of 
-                        their best features. JPEGs can be compressed. So they’re often
-                        used to transport images over the internet and between computers.
-                        But there are also advantages when it comes to printing JPEGs.
+                        noticeable loss in quality for typical use cases
                     </p>
                 </div>
 
@@ -38,11 +33,7 @@ const InfoSection = () => {
                         This means they have a fixed number of pixels, and do not 
                         lose any quality when they are compressed.PNG files are smaller 
                         than JPEGs, meaning they take up less space and download faster.
-                        PNG files do not lose any image quality when they are compressed,
-                        making them a good choice for storing high-quality images.many downside
-                        of PNG Images like PNGs do not support animation,PNGs can be difficult 
-                        to edit,While PNGs can be transparent, but this transparency can 
-                        sometimes result in artefacts around the edges of the image.
+                       
     
                     </p>
                 </div>
@@ -69,11 +60,7 @@ const InfoSection = () => {
                         creating and editing text documents.many diffrent uses of document
                         like Supports text styling, such as bold, italics, underlining, and
                         font customization.also Allows for structured documents with headings, 
-                        tables, and bullet points.you can also embedded object like images,
-                        charts,hyperlinks,non -text elements.many advantages of doc file 
-                        like Supported by numerous applications and platforms,Offers advanced
-                        tools for creating professional documents.Easy to modify text, format, 
-                        and embedded objects.
+                        tables.
 
                     </p>
                 </div>
@@ -87,10 +74,7 @@ const InfoSection = () => {
                         intended PDF is a file format used to present documents 
                         independent of software, hardware, or operating systems.
                         main advantages of PDF file is the maintain original
-                        document structure—including text, images, vector graphics,
-                        and other elements—so you can zoom in or out of the content
-                        without loss of quality.also its Look great and consistent
-                        everywhere. 
+                        document structure.
                     </p>
                 </div>
                 <div className="image-box">
